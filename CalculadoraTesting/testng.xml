@@ -13,8 +13,9 @@
             </run>
         </groups>
         <classes>
-            <class name="parameters.TestWithParameters"></class>
-            <class name="dataProvider.TestWithDataProvider"></class>
+            <class name = "apitTesting.GetMethodsUsers"/>
+<!--            <class name="parameters.TestWithParameters"></class>-->
+<!--            <class name="dataProvider.TestWithDataProvider"></class>-->
         </classes>
     </test>
 </suite>
