@@ -9,12 +9,16 @@
     <test name="TestParameters">
         <groups>
             <run>
-                <include name="dataProvider"></include>
+<!--                <include name="getAllUsers"></include>-->
+                <include name="createNewUser"></include>
+<!--                <include name="dataProvider"></include>-->
             </run>
         </groups>
         <classes>
             <class name = "apiTesting.GetMethodsUsers"/>
-<!--            <class name="parameters.TestWithParameters"></class>-->
+            <class name = "apiTesting.PostMethodUsers"/>
+
+            <!--            <class name="parameters.TestWithParameters"></class>-->
 <!--            <class name="dataProvider.TestWithDataProvider"></class>-->
         </classes>
     </test>

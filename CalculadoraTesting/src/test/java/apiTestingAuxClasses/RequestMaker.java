@@ -5,7 +5,7 @@ import io.restassured.response.Response;
 import static io.restassured.RestAssured.given;
 
 public class RequestMaker {
-    public static Response makeGetRequest(){
+    public static Response makeGetRequest(String url){
         Response response = given()
                 .header("Content-type", "application/json")
                 .when()
@@ -13,29 +13,30 @@ public class RequestMaker {
                 .then()
                 .extract()
                 .response();
-        return response
+        return response;
     }
 
-    public static Response makePostRequest(){
+    public static Response makePostRequest(String url, String bodyContent){
         Response response = given()
                 .header("Content-type", "application/json")
                 .when()
+                .body(bodyContent)
                 .post(url)
                 .then()
                 .extract()
                 .response();
-        return response
+        return response;
     }
 
-    public static Response makeDeleteRequest(){
+    public static Response makeDeleteRequest(String url){
         Response response = given()
                 .header("Content-type", "application/json")
                 .when()
-                .post(url)
+                .delete(url)
                 .then()
                 .extract()
                 .response();
-        return response
+        return response;
     }
 
 }
