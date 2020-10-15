@@ -13,7 +13,7 @@
             </run>
         </groups>
         <classes>
-            <class name = "apitTesting.GetMethodsUsers"/>
+            <class name = "apiTesting.GetMethodsUsers"/>
 <!--            <class name="parameters.TestWithParameters"></class>-->
 <!--            <class name="dataProvider.TestWithDataProvider"></class>-->
         </classes>

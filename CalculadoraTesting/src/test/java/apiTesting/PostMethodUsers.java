@@ -1,4 +1,4 @@
-package apitTesting;
+package apiTesting;
 
 import io.restassured.response.Response;
 import org.json.JSONArray;
@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class GetMethodsUsers {
+public class PostMethodUsers {
 
     @Test(groups = {"all", "getMethod", "getAllUsers"}, description = "getAllUsers API")
     public void getAllUsers(){
@@ -14,7 +14,7 @@ public class GetMethodsUsers {
         Response response = given()
                 .header("Content-type", "application/json")
                 .when()
-                .get(url)
+                .post(url)
                 .then()
                 .extract().response();
         String responseString = response.asString();
@@ -22,4 +22,5 @@ public class GetMethodsUsers {
         System.out.println(jsonResponse.toString(10));
 
     }
+
 }
