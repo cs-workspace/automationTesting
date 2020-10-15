@@ -17,10 +17,9 @@ import java.util.Iterator;
 
 public class PostMethodUsers {
 
-    @Test(groups = {"all", "postMethod", "createNewUser"}, description = "createNewUser API")
-    public void createNewUser(){
+    @Test(groups = {"all", "postMethod", "createNewUser"}, description = "createNewUser API", dataProvider = "getBodyContent")
+    public void createNewUser(String bodyContent){
         String url = " http://localhost:5000/users/add";
-        String bodyContent = CreateBodyContent.getBodyContentUsers();
         Response response = RequestMaker.makePostRequest(url, bodyContent);
 
         String responseString = response.asString();
@@ -28,13 +27,13 @@ public class PostMethodUsers {
         System.out.println(jsonResponse.toString(10));
 
     }
-    @DataProvider()
+    @DataProvider(name = "getBodyContent", parallel = true)
     private Iterator<Object[]> getBodyContent(){
         Collection<Object[]> data = new ArrayList<>();
-        for (int i = 0; i < 100; i++){
+        for (int i = 0; i < 300; i++){
             String bodyContent = CreateBodyContent.getBodyContentUsers();
             JSONObject newUser = new JSONObject(bodyContent);
-            data.add(new Object[] {bodyContent});
+            data.add(new Object[] {newUser.toString()});
         }
         return data.iterator();
     }
