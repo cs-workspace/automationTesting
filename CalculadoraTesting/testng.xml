@@ -15,7 +15,8 @@
 <!--                <include name="createNewUser"></include>-->
 <!--                <include name="createNewCompany"></include>-->
 
-                    <include name="deleteUser"></include>
+<!--                    <include name="deleteUser"></include>-->
+                <include name="deleteCompany"></include>
 <!--                <include name="dataProvider"></include>-->
             </run>
         </groups>
@@ -23,6 +24,7 @@
             <class name = "apiTesting.GetMethodsUsers"/>
             <class name = "apiTesting.PostMethodUsers"/>
             <class name = "apiTesting.DeleteMethodUsers"></class>
+            <class name = "apiTesting.DeleteMethodCompanies"></class>
             <class name = "apiTesting.GetMethodsCompanies"></class>
             <class name = "apiTesting.PostMethodCompanies"></class>
 

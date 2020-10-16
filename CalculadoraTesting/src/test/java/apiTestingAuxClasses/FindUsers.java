@@ -18,4 +18,18 @@ public class FindUsers {
         int lastID = (int) jsonLast.get("id");
         return new int[] {firstID, lastID};
         }
+
+    public static int[] getCompanyID(){
+        String url = "http://localhost:5000/companies/all";
+        Response response = RequestMaker.makeGetRequest(url);
+        String responseString = response.asString();
+        JSONArray jsonResponse = new JSONArray(responseString);
+
+        JSONObject jsonFirst = (JSONObject) jsonResponse.get(0);
+        int firstID = (int) jsonFirst.get("id");
+
+        JSONObject jsonLast = (JSONObject) jsonResponse.get(jsonResponse.length() - 1);
+        int lastID = (int) jsonLast.get("id");
+        return new int[] {firstID, lastID};
+    }
 }

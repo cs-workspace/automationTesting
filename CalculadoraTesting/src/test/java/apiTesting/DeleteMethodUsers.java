@@ -19,7 +19,7 @@ public class DeleteMethodUsers {
     @Test(groups = {"all", "deleteMethod", "deleteUser"}, description = "deleteUser API")
     public void deleteUser(){
         String url = "http://localhost:5000/users/removebyid/";
-        int[] ID = FindUsers.getUserID();
+        int[] ID = FindUsers.getCompanyID();
         int firstID = ID[0];
         int lastID = ID[1];
 //        System.out.println(firstID);
