@@ -10,7 +10,8 @@
         <groups>
             <run>
 <!--                <include name="getAllUsers"></include>-->
-                <include name="createNewUser"></include>
+                <include name="deleteUser"></include>
+<!--                <include name="createNewUser"></include>-->
 <!--                <include name="dataProvider"></include>-->
             </run>
         </groups>

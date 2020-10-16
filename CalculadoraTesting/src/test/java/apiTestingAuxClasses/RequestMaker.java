@@ -30,7 +30,7 @@ public class RequestMaker {
 
     public static Response makeDeleteRequest(String url){
         Response response = given()
-                .header("Content-type", "application/json")
+//                .header("Content-type", "application/json")
                 .when()
                 .delete(url)
                 .then()

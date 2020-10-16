@@ -3,6 +3,7 @@ package apiTesting;
 import apiTestingAuxClasses.RequestMaker;
 import io.restassured.response.Response;
 import org.json.JSONArray;
+import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
@@ -15,7 +16,15 @@ public class GetMethodsUsers {
         Response response = RequestMaker.makeGetRequest(url);
         String responseString = response.asString();
         JSONArray jsonResponse = new JSONArray(responseString);
-        System.out.println(jsonResponse.toString(10));
 
+//        JSONObject jsonFirst = (JSONObject) jsonResponse.get(0);
+//        int firstID = (int) jsonFirst.get("id");
+//
+//        JSONObject jsonLast = (JSONObject) jsonResponse.get(jsonResponse.length() - 1);
+//        int lastID = (int) jsonLast.get("id");
+//
+//        System.out.println(firstID);
+//        System.out.println(lastID);
+        System.out.println(jsonResponse.toString(10));
     }
 }
