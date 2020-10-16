@@ -22,14 +22,19 @@ public class DeleteMethodUsers {
         int[] ID = FindUsers.getUserID();
         int firstID = ID[0];
         int lastID = ID[1];
-        for (int i = firstID; i < lastID; firstID+=2){
-            Response response = RequestMaker.makeDeleteRequest(url+i);
+//        System.out.println(firstID);
+//        System.out.println(lastID);
+        for (int i = firstID; i <= lastID; i+= 1){
+            if (i % 2 == 0){
+                System.out.println("even");
+                Response response = RequestMaker.makeDeleteRequest(url+i);
 
-            String responseString = response.asString();
-            JSONObject jsonResponse = new JSONObject(responseString);
-            System.out.println(jsonResponse.toString(10));
+                String responseString = response.asString();
+                JSONObject jsonResponse = new JSONObject(responseString);
+                System.out.println(jsonResponse.toString(10));
+            }
+
         }
-
 
     }
 //    @DataProvider(name = "deleteEvenUsers", parallel = true)
