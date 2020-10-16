@@ -10,14 +10,21 @@
         <groups>
             <run>
 <!--                <include name="getAllUsers"></include>-->
-                <include name="deleteUser"></include>
+<!--                <include name="getAllCompanies"></include>-->
+
 <!--                <include name="createNewUser"></include>-->
+<!--                <include name="createNewCompany"></include>-->
+
+                    <include name="deleteUser"></include>
 <!--                <include name="dataProvider"></include>-->
             </run>
         </groups>
         <classes>
             <class name = "apiTesting.GetMethodsUsers"/>
             <class name = "apiTesting.PostMethodUsers"/>
+            <class name = "apiTesting.DeleteMethodUsers"></class>
+            <class name = "apiTesting.GetMethodsCompanies"></class>
+            <class name = "apiTesting.PostMethodCompanies"></class>
 
             <!--            <class name="parameters.TestWithParameters"></class>-->
 <!--            <class name="dataProvider.TestWithDataProvider"></class>-->

@@ -23,7 +23,7 @@ public class DeleteMethodUsers {
         int firstID = ID[0];
         int lastID = ID[1];
         for (int i = firstID; i < lastID; firstID+=2){
-            Response response = RequestMaker.makeDeleteRequest(url);
+            Response response = RequestMaker.makeDeleteRequest(url+i);
 
             String responseString = response.asString();
             JSONObject jsonResponse = new JSONObject(responseString);
