@@ -4,9 +4,7 @@ import apiTestingAuxClasses.CreateBodyContent;
 import apiTestingAuxClasses.RequestMaker;
 import com.github.javafaker.Faker;
 import com.github.javafaker.Name;
-import io.restassured.response.Response;
-import org.json.JSONArray;
-import org.json.JSONObject;
+import io.restassured.response.Response;import org.json.JSONObject;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

@@ -1,18 +1,11 @@
 package apiTesting;
 
-import apiTestingAuxClasses.CreateBodyContent;
 import apiTestingAuxClasses.FindUsers;
 import apiTestingAuxClasses.RequestMaker;
 import io.restassured.response.Response;
-import org.json.JSONArray;
 import org.json.JSONObject;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
 
 public class DeleteMethodUsers {
 
